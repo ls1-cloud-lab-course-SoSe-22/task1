@@ -64,6 +64,9 @@ cmake -S . -B build/dev -D CMAKE_BUILD_TYPE=Release
 cmake --build build/dev -j$(nproc)
 ```
 
+We provide you with an empty file `build.sh` which is expected by the CI to perform the build of the task.
+Therefore, you are also requested to complete this script.
+
 ## Example
 
 Run the server:
