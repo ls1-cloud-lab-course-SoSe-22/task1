@@ -71,6 +71,7 @@ def test_server(
         with subprocess.Popen(
             server,
             stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
         ) as proc:
             # Wait for server init
@@ -93,7 +94,7 @@ def test_server(
                 diff = end - start
 
             proc.terminate()
-            stdout, _ = proc.communicate()
+            stdout, stderr = proc.communicate()
 
             info("OK")
 
